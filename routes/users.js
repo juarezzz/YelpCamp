@@ -8,7 +8,7 @@ router.get('/register', (req, res) => {
     res.render('users/register');
 })
 
-router.post('/register', catchAsync(async (req, res) => {
+router.post('/register', catchAsync(async (req, res, next) => {
     try {
         const { email, username, password } = req.body;
         const newUser = new User({ email, username });
@@ -25,7 +25,7 @@ router.post('/register', catchAsync(async (req, res) => {
 }))
 
 router.get('/login', (req, res) => {
-    const returnURL = req.query.from || encodeURIComponent('/campgrounds')
+    const returnURL = req.query.from || '/campgrounds'
     res.render('users/login', { returnURL });
 })
 
