@@ -1,4 +1,4 @@
-#YelpCamp
+# YelpCamp
 
 **YelpCamp** é um projeto que eu fiz junto a um curso da Udemy, como forma de solidificar tudo que eu aprendi durante o curso. É um site para avaliação de áreas de camping.
 O backend da aplicação foi desenvido usando NodeJS e Express, e usando MongoDB como banco de dados. O frontend foi desenvido usando EJS e Bootstrap.
