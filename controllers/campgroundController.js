@@ -17,6 +17,11 @@ module.exports.create_campground = async (req, res) => {
         query: req.body.campground.location,
         limit: 1
     }).send()
+    if (geodata.body.features.length === 0) {
+        req.flash('error', `Could not find "${req.body.campground.location}" on the map!`)
+        console.log(req.get('Referrer'));
+        return res.redirect('back');
+    }
     const newCampground = new Campground(req.body.campground);
     const images = req.files.map(file => ({ url: file.path, filename: file.filename }));
     newCampground.images = images;

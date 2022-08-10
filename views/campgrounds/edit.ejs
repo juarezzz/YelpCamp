@@ -48,7 +48,9 @@
                         Looks good!
                     </div>
                 </div>
-                <h6>Delete Images</h6>
+                <% if (campground.images.length > 0) { %>
+                    <h6>Delete Images</h6>
+                <% } %>
                 <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
                     <% campground.images.forEach((image, i)=> { %>
                         <div class="col">

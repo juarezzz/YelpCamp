@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { cloudinary } = require("../api/cloudinary.config");
 const Review = require("./review");
 const Schema = mongoose.Schema;
 
@@ -55,6 +56,11 @@ CampgroundSchema.post('findOneAndDelete', async (doc) => {
                 $in: doc.reviews
             }
         })
+        if (doc.images.length > 0) {
+            for (let image of doc.images) {
+                await cloudinary.uploader.destroy(image.filename)
+            }
+        }
     }
 })
 

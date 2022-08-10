@@ -112,6 +112,7 @@ app.use(
 );
 
 app.use(helmet.crossOriginEmbedderPolicy({ policy: "credentialless" }));
+app.use(helmet.referrerPolicy({ policy: "same-origin" }));
 
 app.use(passport.initialize());
 app.use(passport.session());

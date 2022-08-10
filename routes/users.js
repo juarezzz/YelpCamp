@@ -10,7 +10,7 @@ router.route('/register')
 
 router.route('/login')
     .get(controller.get_login_user)
-    .post(passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), controller.login_user)
+    .post(passport.authenticate('local', { failureFlash: true, failureRedirect: 'back' }), controller.login_user)
 
 router.get('/logout', controller.logout_user)
 
