@@ -21,12 +21,12 @@ module.exports.register_user = async (req, res, next) => {
 }
 
 module.exports.get_login_user = (req, res) => {
-    const returnURL = req.query.from || '/campgrounds'
+    const returnURL = req.query.from
     res.render('users/login', { returnURL });
 }
 
 module.exports.login_user = (req, res) => {
-    const returnURL = req.query.from;
+    const returnURL = req.query.from ?? '/campgrounds';
     req.flash('success', 'Welcome back!');
     res.redirect(returnURL);
 }

@@ -27,10 +27,10 @@ async function seedDB() {
             location: `${randomCity.city}, ${randomCity.state}`,
             price: Math.ceil(Math.random() * 100000 + 100),
             description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Quisquam explicabo cupiditate libero ullam nisi reiciendis ducimus eaque enim aperiam! Illo aperiam doloremque fugit iure, illum nostrum officiis blanditiis soluta placeat.",
-            author: '62e462ea39e3491d652e58f2',
+            author: '62f1f86626745ebc2f072d1d',
             images: [
                 {
-                    url: 'https://res.cloudinary.com/du7yqh30m/image/upload/v1659583567/yelp-camp/pucn1exgcpqb5vkf0yd7.jpg',
+                    url: 'https://res.cloudinary.com/du7yqh30m/image/upload/v1660016192/yelp-camp/Campground_wuuids.jpg',
                     filename: 'yelp-camp/pucn1exgcpqb5vkf0yd7'
                 }
             ],

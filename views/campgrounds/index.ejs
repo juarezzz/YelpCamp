@@ -7,8 +7,11 @@
     </script>
     <script src="/scripts/clusterMap.js" defer></script>
 
-    <h1>All Campgrounds</h1>
+    <h1 class="mt-4">All Campgrounds</h1>
     <div> <a href="/campgrounds/new">Create a new campground</a></div>
+    <% if (campgrounds.length === 0) { %>
+        <h2 class="text-center py-5">There are no campgrounds to show yet.<br> <a class="link-primary" href="/campgrounds/new">Create the first one!</a></h2>
+    <% } %>
     <% for (let campground of campgrounds) { %>
         <div class="card mb-3">
             <div class="row">
